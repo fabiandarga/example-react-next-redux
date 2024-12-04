@@ -1,3 +1,5 @@
+'use client';
+
 import { useAppSelector } from '@/store/hooks';
 import Link from 'next/link';
 
