@@ -1,13 +1,9 @@
+import { useAppSelector } from '@/store/hooks';
 import Link from 'next/link';
 
 const StudentsPage = () => {
-  const students = [
-    { id: 1, name: 'Peter', age: 22, email: 'peter@example.com' },
-    { id: 2, name: 'Bob', age: 23, email: 'bob@example.com' },
-    { id: 3, name: 'Charlie', age: 27, email: 'charlie@example.com' },
-    { id: 4, name: 'Judy', age: 27, email: 'Judy@example.com' },
-    { id: 5, name: 'Alice', age: 25, email: 'alice@example.com' },
-  ];
+  const students = useAppSelector((state) => state.students.students);
+  
   return (
     <ul className="m-8">
     {students.map((student) => (
